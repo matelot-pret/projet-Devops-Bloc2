@@ -1,0 +1,71 @@
+networks:
+  front:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.255.255.0/24
+          gateway: 10.255.255.254
+    driver_opts:
+      com.docker.network.bridge.enable_ip_masquerade: "true"
+
+  back:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.254.255.0/24
+          gateway: 10.254.255.254
+    driver_opts:
+      com.docker.network.bridge.enable_ip_masquerade: "false"
+
+services:
+  apache:
+    build: ./site-apache
+    networks:
+      front:
+        ipv4_address: 10.255.255.22
+      back:
+    expose:
+      - "80"
+    volumes:
+      - ./site-apache:/usr/local/apache2/htdocs
+
+  nginx-site:
+    build: ./site-nginx
+    networks:
+      front:
+        ipv4_address: 10.255.255.21
+      back:
+    expose:
+      - "80"
+    volumes:
+      - ./site-nginx:/usr/share/nginx/html
+
+  reverse-proxy:
+    image: nginx:latest
+    networks:
+      front:
+        ipv4_address: 10.255.255.20
+    ports:
+      - "80:80"
+    volumes:
+      - ./reverse-proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+
+  bd:
+    image: postgres:16
+    networks:
+      - back
+    environment:
+      POSTGRES_PASSWORD: secret
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:latest
+    networks:
+      - back
+    volumes:
+      - redis_data:/data
+
+volumes:
+  pg_data:
+  redis_data:
