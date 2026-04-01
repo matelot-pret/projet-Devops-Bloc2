@@ -1,0 +1,2 @@
+CREATE TABLE Pays(nom VARCHAR, population INTEGER, langue VARCHAR, id SERIAL PRIMARY KEY )
+CREATE TABLE Ville(idPays REFERENCES(Pays id), nom)
