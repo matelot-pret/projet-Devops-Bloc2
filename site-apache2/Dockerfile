@@ -1,12 +1,12 @@
 #image
-FROM nginx:latest
+FROM php:apache
 #Metadata du container
 LABEL authors="Patrick"
 LABEL maintainer="Patrick"
 LABEL version="1.0"
 LABEL description="webserver based image for lab"
 #WORKDIR : repertoire de reference
-WORKDIR /usr/share/nginx/html
+WORKDIR /var/www/html
 
 ENV HOME=/root
 

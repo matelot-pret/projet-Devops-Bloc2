@@ -18,8 +18,8 @@ networks:
       com.docker.network.bridge.enable_ip_masquerade: "false"
 
 services:
-  apache:
-    build: ./site-apache
+  apache1:
+    build: site-apache1
     networks:
       front:
         ipv4_address: 10.255.255.22
@@ -27,10 +27,10 @@ services:
     expose:
       - "80"
     volumes:
-      - ./site-apache:/usr/local/apache2/htdocs
+      - ./site-apache1:/var/www/html
 
-  nginx-site:
-    build: ./site-nginx
+  apache2:
+    build: site-apache2
     networks:
       front:
         ipv4_address: 10.255.255.21
@@ -38,7 +38,7 @@ services:
     expose:
       - "80"
     volumes:
-      - ./site-nginx:/usr/share/nginx/html
+      - ./site-apache2:/var/www/html
 
   reverse-proxy:
     image: nginx:latest
