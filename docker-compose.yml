@@ -24,6 +24,7 @@ services:
       front:
         ipv4_address: 10.255.255.22
       back:
+        ipv4_address: 10.254.255.22
     expose:
       - "80"
     volumes:
@@ -35,6 +36,7 @@ services:
       front:
         ipv4_address: 10.255.255.21
       back:
+        ipv4_address: 10.254.255.21
     expose:
       - "80"
     volumes:
@@ -58,6 +60,7 @@ services:
       POSTGRES_PASSWORD: secret
     volumes:
       - pg_data:/var/lib/postgresql/data
+      - ./databse/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   redis:
     image: redis:latest

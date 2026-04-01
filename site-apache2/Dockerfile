@@ -11,5 +11,5 @@ WORKDIR /var/www/html
 ENV HOME=/root
 
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y nano wget git net-tools && \
+    apt-get install -y nano wget git net-tools iputils-ping && \
     apt-get clean
