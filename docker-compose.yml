@@ -41,6 +41,9 @@ services:
       - "80"
     volumes:
       - ./site-apache2:/var/www/html
+    depends_on:
+      redis:
+        condition: service_healthy
 
   reverse-proxy:
     image: nginx:latest
@@ -68,6 +71,12 @@ services:
       - back
     volumes:
       - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
 
 volumes:
   pg_data:
