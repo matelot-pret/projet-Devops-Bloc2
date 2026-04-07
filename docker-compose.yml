@@ -41,6 +41,9 @@ services:
       - "80"
     volumes:
       - ./site-apache2:/var/www/html
+    depends_on:
+      redis:
+        condition: service_healthy
 
   reverse-proxy:
     image: nginx:latest
@@ -55,7 +58,8 @@ services:
   bd:
     image: postgres:16
     networks:
-      - back
+      back:
+        ipv4_address: 10.254.255.31
     environment:
       POSTGRES_PASSWORD: secret
     volumes:
@@ -65,9 +69,16 @@ services:
   redis:
     image: redis:latest
     networks:
-      - back
+      back:
+        ipv4_address: 10.254.255.30
     volumes:
       - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
 
   trivy:
     image: aquasec/trivy:0.61.0
