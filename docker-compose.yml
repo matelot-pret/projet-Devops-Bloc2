@@ -72,6 +72,7 @@ services:
 
   redis:
     image: redis:latest
+    command: ["redis-server", "--requirepass", "${REDIS_PASSWORD}"]
     networks:
       back:
         ipv4_address: 10.254.255.30
