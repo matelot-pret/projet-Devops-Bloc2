@@ -1,3 +1,0 @@
-2026-04-07T09:37:36Z	INFO	[vulndb] Need to update DB
-2026-04-07T09:37:36Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-04-07T09:37:36Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
