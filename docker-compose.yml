@@ -47,6 +47,9 @@ services:
 
   reverse-proxy:
     image: nginx:latest
+    depends_on:
+      - apache1
+      - apache2
     networks:
       front:
         ipv4_address: 10.255.255.20
@@ -87,10 +90,10 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./logs:/logs
+      - ./trivy-cache:/root/.cache/trivy
     networks:
       - front
 
 volumes:
   pg_data:
   redis_data:
-  trivy_cache:
