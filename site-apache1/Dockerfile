@@ -1,8 +1,8 @@
 #image
 FROM php:apache
 #Metadata du container
-LABEL authors="Patrick"
-LABEL maintainer="Patrick"
+LABEL authors="Patrick, Christian, Jean"
+LABEL maintainer="Patrick, Christian, Jean"
 LABEL version="1.0"
 LABEL description="webserver based image for lab"
 #WORKDIR : repertoire de reference

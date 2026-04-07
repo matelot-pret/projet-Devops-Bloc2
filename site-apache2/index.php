@@ -10,6 +10,7 @@ $debut = microtime(true);
 
 $redis = new Redis();
 $redis->connect('redis', 6379);
+$redis->auth(getenv('REDIS_PASSWORD'));
 
 $cache = $redis->get('pays');
 
@@ -17,7 +18,7 @@ if ($cache) {
     $pays = unserialize($cache);
     $source = "CACHE Redis";
 } else {
-    $conn = pg_connect("host=bd dbname=Patrick user=Patrick password=Samourai3");
+    $conn = pg_connect("host=bd dbname=" . getenv('POSTGRES_DB') . " user=" . getenv('POSTGRES_USER') . " password=" . getenv('POSTGRES_PASSWORD'));
     $result = pg_query($conn, "SELECT * FROM Pays");
     $pays = pg_fetch_all($result);
     pg_close($conn);
