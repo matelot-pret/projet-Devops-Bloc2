@@ -1,0 +1,344 @@
+apache1-1  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.255.255.22. Set the 'ServerName' directive globally to suppress this message
+redis-1    | Starting Redis Server
+apache1-1  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.255.255.22. Set the 'ServerName' directive globally to suppress this message
+apache1-1  | [Tue Apr 07 07:41:54.800515 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.66 (Debian) PHP/8.5.4 configured -- resuming normal operations
+apache1-1  | [Tue Apr 07 07:41:54.800558 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+apache2-1  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.254.255.21. Set the 'ServerName' directive globally to suppress this message
+apache2-1  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.254.255.21. Set the 'ServerName' directive globally to suppress this message
+apache2-1  | [Tue Apr 07 07:41:54.760928 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.66 (Debian) PHP/8.5.4 configured -- resuming normal operations
+apache2-1  | [Tue Apr 07 07:41:54.760965 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+redis-1    | 1:C 01 Apr 2026 13:12:41.227 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1    | 1:C 01 Apr 2026 13:12:41.227 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1    | 1:C 01 Apr 2026 13:12:41.227 * Redis version=8.6.1, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1          | 1:C 01 Apr 2026 13:12:41.227 * Configuration loaded
+reverse-proxy-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+redis-1          | 1:M 01 Apr 2026 13:12:41.227 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+redis-1          | 1:M 01 Apr 2026 13:12:41.227 * monotonic clock: POSIX clock_gettime
+redis-1          | 1:M 01 Apr 2026 13:12:41.228 * Running mode=standalone, port=6379.
+redis-1          | 1:M 01 Apr 2026 13:12:41.228 * <bf> RedisBloom version 8.6.0 (Git=unknown)
+redis-1          | 1:M 01 Apr 2026 13:12:41.228 * <bf> Registering configuration options: [
+redis-1          | 1:M 01 Apr 2026 13:12:41.228 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.229 * <bf> 	{ bf-initial-size     :       100 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.229 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.229 * <bf> 	{ cf-bucket-size      :         2 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.229 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.229 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.229 * <bf> 	{ cf-expansion-factor :         1 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.229 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.229 * <bf> ]
+redis-1          | 1:M 01 Apr 2026 13:12:41.229 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1          | 1:M 01 Apr 2026 13:12:41.231 * <search> Redis version found by RedisSearch : 8.6.1 - oss
+bd-1             | The files belonging to this database system will be owned by user "postgres".
+reverse-proxy-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+reverse-proxy-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+bd-1             | This user must also own the server process.
+reverse-proxy-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+bd-1             | 
+bd-1             | The database cluster will be initialized with locale "en_US.utf8".
+reverse-proxy-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+bd-1             | The default database encoding has accordingly been set to "UTF8".
+reverse-proxy-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+bd-1             | The default text search configuration will be set to "english".
+bd-1             | 
+bd-1             | Data page checksums are disabled.
+bd-1             | 
+bd-1             | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+redis-1          | 1:M 01 Apr 2026 13:12:41.231 * <search> RediSearch version 8.6.0 (Git=7782b97)
+redis-1          | 1:M 01 Apr 2026 13:12:41.231 * <search> Low level api version 1 initialized successfully
+redis-1          | 1:M 01 Apr 2026 13:12:41.231 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, oom policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, default scorer: BM25STD, 
+redis-1          | 1:M 01 Apr 2026 13:12:41.231 * <search> Initialized thread pools!
+redis-1          | 1:M 01 Apr 2026 13:12:41.231 * <search> Disabled workers threadpool of size 0
+redis-1          | 1:M 01 Apr 2026 13:12:41.231 * <search> Subscribe to config changes
+redis-1          | 1:M 01 Apr 2026 13:12:41.231 * <search> Subscribe to cluster slot migration events
+redis-1          | 1:M 01 Apr 2026 13:12:41.231 * <search> Enabled role change notification
+redis-1          | 1:M 01 Apr 2026 13:12:41.232 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1          | 1:M 01 Apr 2026 13:12:41.232 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> RedisTimeSeries version 80600, git_sha=05fd355db748676861dc4c17d19c8c1ca74c0154
+bd-1             | creating subdirectories ... ok
+bd-1             | selecting dynamic shared memory implementation ... posix
+bd-1             | selecting default max_connections ... 100
+bd-1             | selecting default shared_buffers ... 128MB
+bd-1             | selecting default time zone ... Etc/UTC
+bd-1             | creating configuration files ... ok
+reverse-proxy-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+bd-1             | running bootstrap script ... ok
+bd-1             | performing post-bootstrap initialization ... ok
+bd-1             | syncing data to disk ... ok
+bd-1             | 
+bd-1             | 
+bd-1             | Success. You can now start the database server using:
+bd-1             | 
+bd-1             |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+bd-1             | 
+bd-1             | initdb: warning: enabling "trust" authentication for local connections
+bd-1             | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+reverse-proxy-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+reverse-proxy-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:15:09 +0000] "GET / HTTP/1.1" 200 404 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:15:15 +0000] "GET / HTTP/1.1" 200 407 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:15:43 +0000] "GET / HTTP/1.1" 200 402 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:15:47 +0000] "GET / HTTP/1.1" 200 407 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:15:51 +0000] "GET / HTTP/1.1" 200 407 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:15:53 +0000] "GET / HTTP/1.1" 200 406 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:15:54 +0000] "GET / HTTP/1.1" 200 406 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:15:55 +0000] "GET / HTTP/1.1" 200 405 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:15:59 +0000] "GET / HTTP/1.1" 200 395 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:16:00 +0000] "GET / HTTP/1.1" 200 394 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:16:01 +0000] "GET / HTTP/1.1" 200 393 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:13:16:01 +0000] "GET / HTTP/1.1" 200 394 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:14:56:22 +0000] "GET / HTTP/1.1" 200 393 "-" "Avast Antivirus"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:14:56:47 +0000] "GET /HNAP1/ HTTP/1.1" 404 309 "-" "Avast Antivirus"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:14:56:49 +0000] "GET / HTTP/1.1" 200 775 "-" "-"
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> Redis version found by RedisTimeSeries : 8.6.1 - oss
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> Registering configuration options: [
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:14:56:51 +0000] "GET /loginMsg.js HTTP/1.1" 404 309 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:14:56:51 +0000] "GET /cgi/get.cgi?cmd=home_login HTTP/1.1" 404 309 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> ]
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> Detected redis oss
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> Subscribe to ASM events
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * <timeseries> Enabled diskless replication
+redis-1          | 1:M 01 Apr 2026 13:12:41.233 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:00 +0000] "GET / HTTP/1.1" 200 405 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <ReJSON> version: 80600 git sha: unknown branch: unknown
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <ReJSON> Exported RedisJSON_V1 API
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <ReJSON> Exported RedisJSON_V2 API
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <ReJSON> Exported RedisJSON_V3 API
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <ReJSON> Exported RedisJSON_V4 API
+bd-1             | waiting for server to start....2026-04-01 13:12:41.892 UTC [48] LOG:  starting PostgreSQL 16.13 (Debian 16.13-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <ReJSON> Exported RedisJSON_V5 API
+bd-1             | 2026-04-01 13:12:41.896 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <ReJSON> Exported RedisJSON_V6 API
+bd-1             | 2026-04-01 13:12:41.911 UTC [51] LOG:  database system was shut down at 2026-04-01 13:12:41 UTC
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <ReJSON> Enabled diskless replication
+bd-1             | 2026-04-01 13:12:41.918 UTC [48] LOG:  database system is ready to accept connections
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <ReJSON> Initialized shared string cache, thread safe: true.
+bd-1             |  done
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+bd-1             | server started
+redis-1          | 1:M 01 Apr 2026 13:12:41.234 * <search> Acquired RedisJSON_V6 API
+bd-1             | 
+redis-1          | 1:M 01 Apr 2026 13:12:41.235 * Server initialized
+bd-1             | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+redis-1          | 1:M 01 Apr 2026 13:12:41.235 * Ready to accept connections tcp
+bd-1             | CREATE TABLE
+bd-1             | CREATE TABLE
+bd-1             | INSERT 0 1
+redis-1          | 1:M 01 Apr 2026 13:12:41.235 # WARNING: Redis does not require authentication and is not protected by network restrictions. Redis will accept connections from any IP address on any network interface.
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:03 +0000] "GET / HTTP/1.1" 200 407 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+redis-1          | 1:M 01 Apr 2026 14:55:34.842 * 1 changes in 3600 seconds. Saving...
+redis-1          | 1:M 01 Apr 2026 14:55:34.844 * Background saving started by pid 31
+redis-1          | 31:C 01 Apr 2026 14:55:34.846 * BGSAVE done, 0 keys saved, 0 keys skipped, 88 bytes written.
+redis-1          | 31:C 01 Apr 2026 14:55:34.859 * DB saved on disk
+redis-1          | 31:C 01 Apr 2026 14:55:34.860 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1          | 1:M 01 Apr 2026 14:55:34.947 * Background saving terminated with success
+redis-1          | 1:M 01 Apr 2026 16:28:00.410 * 1 changes in 3600 seconds. Saving...
+redis-1          | 1:M 01 Apr 2026 16:28:00.413 * Background saving started by pid 32
+redis-1          | 32:C 01 Apr 2026 16:28:00.422 * BGSAVE done, 1 keys saved, 0 keys skipped, 526 bytes written.
+redis-1          | 32:C 01 Apr 2026 16:28:00.428 * DB saved on disk
+redis-1          | 32:C 01 Apr 2026 16:28:00.429 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1          | 1:M 01 Apr 2026 16:28:00.517 * Background saving terminated with success
+redis-1          | 1:signal-handler (1775077646) Received SIGTERM scheduling shutdown...
+redis-1          | 1:M 01 Apr 2026 21:07:26.948 * User requested shutdown...
+redis-1          | 1:M 01 Apr 2026 21:07:26.948 * Saving the final RDB snapshot before exiting.
+redis-1          | 1:M 01 Apr 2026 21:07:26.954 * BGSAVE done, 0 keys saved, 0 keys skipped, 88 bytes written.
+redis-1          | 1:M 01 Apr 2026 21:07:26.968 * DB saved on disk
+redis-1          | 1:M 01 Apr 2026 21:07:26.969 # Redis is now ready to exit, bye bye...
+redis-1          | Starting Redis Server
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:05 +0000] "GET / HTTP/1.1" 200 407 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+redis-1          | 1:C 07 Apr 2026 07:41:54.743 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:07 +0000] "GET / HTTP/1.1" 200 406 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:08 +0000] "GET / HTTP/1.1" 200 406 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:09 +0000] "GET / HTTP/1.1" 200 406 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:11 +0000] "GET / HTTP/1.1" 200 394 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:12 +0000] "GET / HTTP/1.1" 200 394 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:13 +0000] "GET / HTTP/1.1" 200 394 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:14 +0000] "GET / HTTP/1.1" 200 394 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:14 +0000] "GET / HTTP/1.1" 200 394 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:17 +0000] "GET / HTTP/1.1" 200 406 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:16:28:18 +0000] "GET / HTTP/1.1" 200 406 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:20:00:06 +0000] "GET / HTTP/1.1" 200 394 "-" "Avast Antivirus"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:20:00:31 +0000] "GET /HNAP1/ HTTP/1.1" 404 309 "-" "Avast Antivirus"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:20:00:34 +0000] "GET / HTTP/1.1" 200 775 "-" "-"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:20:00:35 +0000] "GET /loginMsg.js HTTP/1.1" 404 309 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:20:00:35 +0000] "GET /cgi/get.cgi?cmd=home_login HTTP/1.1" 404 309 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"
+reverse-proxy-1  | 192.168.32.1 - - [01/Apr/2026:20:00:36 +0000] "POST /boaform/admin/formPing HTTP/1.1" 404 309 "-" "Avast Antivirus"
+reverse-proxy-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+reverse-proxy-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+reverse-proxy-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+reverse-proxy-1  | 10-listen-on-ipv6-by-default.sh: info: IPv6 listen already enabled
+bd-1             | INSERT 0 1
+reverse-proxy-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+bd-1             | INSERT 0 1
+reverse-proxy-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+bd-1             | INSERT 0 1
+reverse-proxy-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+bd-1             | INSERT 0 1
+reverse-proxy-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+bd-1             | INSERT 0 1
+redis-1          | 1:C 07 Apr 2026 07:41:54.744 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1          | 1:C 07 Apr 2026 07:41:54.744 * Redis version=8.6.1, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1          | 1:C 07 Apr 2026 07:41:54.744 * Configuration loaded
+redis-1          | 1:M 07 Apr 2026 07:41:54.745 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+bd-1             | INSERT 0 1
+redis-1          | 1:M 07 Apr 2026 07:41:54.745 * monotonic clock: POSIX clock_gettime
+redis-1          | 1:M 07 Apr 2026 07:41:54.747 * Running mode=standalone, port=6379.
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> RedisBloom version 8.6.0 (Git=unknown)
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> Registering configuration options: [
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> 	{ bf-initial-size     :       100 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> 	{ cf-bucket-size      :         2 }
+bd-1             | INSERT 0 1
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> 	{ cf-expansion-factor :         1 }
+bd-1             | 
+bd-1             | 
+bd-1             | waiting for server to shut down...2026-04-01 13:12:42.120 UTC [48] LOG:  received fast shutdown request
+bd-1             | .2026-04-01 13:12:42.125 UTC [48] LOG:  aborting any active transactions
+bd-1             | 2026-04-01 13:12:42.126 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+bd-1             | 2026-04-01 13:12:42.126 UTC [49] LOG:  shutting down
+bd-1             | 2026-04-01 13:12:42.130 UTC [49] LOG:  checkpoint starting: shutdown immediate
+bd-1             | 2026-04-01 13:12:42.174 UTC [49] LOG:  checkpoint complete: wrote 74 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.009 s, sync=0.021 s, total=0.048 s; sync files=52, longest=0.005 s, average=0.001 s; distance=221 kB, estimate=221 kB; lsn=0/1529FB8, redo lsn=0/1529FB8
+bd-1             | 2026-04-01 13:12:42.177 UTC [48] LOG:  database system is shut down
+bd-1             |  done
+bd-1             | server stopped
+bd-1             | 
+bd-1             | PostgreSQL init process complete; ready for start up.
+bd-1             | 
+bd-1             | 2026-04-01 13:12:42.243 UTC [1] LOG:  starting PostgreSQL 16.13 (Debian 16.13-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+bd-1             | 2026-04-01 13:12:42.244 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+bd-1             | 2026-04-01 13:12:42.244 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+bd-1             | 2026-04-01 13:12:42.253 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+bd-1             | 2026-04-01 13:12:42.263 UTC [64] LOG:  database system was shut down at 2026-04-01 13:12:42 UTC
+bd-1             | 2026-04-01 13:12:42.270 UTC [1] LOG:  database system is ready to accept connections
+bd-1             | 2026-04-01 13:17:42.079 UTC [62] LOG:  checkpoint starting: time
+bd-1             | 2026-04-01 13:17:46.674 UTC [62] LOG:  checkpoint complete: wrote 47 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.555 s, sync=0.019 s, total=4.597 s; sync files=13, longest=0.006 s, average=0.002 s; distance=260 kB, estimate=260 kB; lsn=0/156B3B8, redo lsn=0/156B380
+bd-1             | 2026-04-01 21:07:26.924 UTC [1] LOG:  received fast shutdown request
+bd-1             | 2026-04-01 21:07:26.932 UTC [1] LOG:  aborting any active transactions
+bd-1             | 2026-04-01 21:07:26.947 UTC [1] LOG:  background worker "logical replication launcher" (PID 67) exited with exit code 1
+bd-1             | 2026-04-01 21:07:26.948 UTC [62] LOG:  shutting down
+bd-1             | 2026-04-01 21:07:26.957 UTC [62] LOG:  checkpoint starting: shutdown immediate
+bd-1             | 2026-04-01 21:07:27.002 UTC [62] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.017 s, sync=0.001 s, total=0.054 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=234 kB; lsn=0/156B468, redo lsn=0/156B468
+bd-1             | 2026-04-01 21:07:27.023 UTC [1] LOG:  database system is shut down
+bd-1             | 
+bd-1             | PostgreSQL Database directory appears to contain a database; Skipping initialization
+bd-1             | 
+bd-1             | 2026-04-07 07:41:54.784 UTC [1] LOG:  starting PostgreSQL 16.13 (Debian 16.13-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+bd-1             | 2026-04-07 07:41:54.785 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+bd-1             | 2026-04-07 07:41:54.785 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+bd-1             | 2026-04-07 07:41:54.789 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+bd-1             | 2026-04-07 07:41:54.796 UTC [29] LOG:  database system was shut down at 2026-04-01 21:07:26 UTC
+bd-1             | 2026-04-07 07:41:54.808 UTC [1] LOG:  database system is ready to accept connections
+bd-1             | 2026-04-07 07:47:19.873 UTC [27] LOG:  checkpoint starting: time
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * <bf> ]
+redis-1          | 1:M 07 Apr 2026 07:41:54.750 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1          | 1:M 07 Apr 2026 07:41:54.773 * <search> Redis version found by RedisSearch : 8.6.1 - oss
+redis-1          | 1:M 07 Apr 2026 07:41:54.773 * <search> RediSearch version 8.6.0 (Git=7782b97)
+redis-1          | 1:M 07 Apr 2026 07:41:54.773 * <search> Low level api version 1 initialized successfully
+redis-1          | 1:M 07 Apr 2026 07:41:54.774 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, oom policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, default scorer: BM25STD, 
+redis-1          | 1:M 07 Apr 2026 07:41:54.774 * <search> Initialized thread pools!
+redis-1          | 1:M 07 Apr 2026 07:41:54.774 * <search> Disabled workers threadpool of size 0
+redis-1          | 1:M 07 Apr 2026 07:41:54.775 * <search> Subscribe to config changes
+redis-1          | 1:M 07 Apr 2026 07:41:54.775 * <search> Subscribe to cluster slot migration events
+redis-1          | 1:M 07 Apr 2026 07:41:54.775 * <search> Enabled role change notification
+bd-1             | 2026-04-07 07:47:19.885 UTC [27] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.013 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/156B550, redo lsn=0/156B518
+redis-1          | 1:M 07 Apr 2026 07:41:54.775 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1          | 1:M 07 Apr 2026 07:41:54.776 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> RedisTimeSeries version 80600, git_sha=05fd355db748676861dc4c17d19c8c1ca74c0154
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> Redis version found by RedisTimeSeries : 8.6.1 - oss
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> Registering configuration options: [
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1          | 1:M 07 Apr 2026 07:41:54.778 * <timeseries> ]
+redis-1          | 1:M 07 Apr 2026 07:41:54.779 * <timeseries> Detected redis oss
+redis-1          | 1:M 07 Apr 2026 07:41:54.779 * <timeseries> Subscribe to ASM events
+redis-1          | 1:M 07 Apr 2026 07:41:54.779 * <timeseries> Enabled diskless replication
+redis-1          | 1:M 07 Apr 2026 07:41:54.779 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1          | 1:M 07 Apr 2026 07:41:54.785 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * <ReJSON> version: 80600 git sha: unknown branch: unknown
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * <ReJSON> Exported RedisJSON_V1 API
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * <ReJSON> Exported RedisJSON_V2 API
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * <ReJSON> Exported RedisJSON_V3 API
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * <ReJSON> Exported RedisJSON_V4 API
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * <ReJSON> Exported RedisJSON_V5 API
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * <ReJSON> Exported RedisJSON_V6 API
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * <ReJSON> Enabled diskless replication
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * <ReJSON> Initialized shared string cache, thread safe: true.
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * <search> Acquired RedisJSON_V6 API
+redis-1          | 1:M 07 Apr 2026 07:41:54.787 * Server initialized
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * <search> Changing workers threadpool size from 0 to 4
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * <search> Enabled workers threadpool of size 4
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * <search> Loading event started
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * Loading RDB produced by version 8.6.1
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * RDB age 470068 seconds
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * RDB memory usage when created 1.33 Mb
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * Done loading RDB, keys loaded: 0, keys expired: 0.
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * <search> Changing workers threadpool size from 4 to 0
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * <search> Scheduling config_reduce_threads_job to remove all 4 threads when empty
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * <search> Disabled workers threadpool of size 4
+redis-1          | 1:M 07 Apr 2026 07:41:54.789 * <search> Loading event ended successfully
+redis-1          | 1:M 07 Apr 2026 07:41:54.790 * DB loaded from disk: 0.002 seconds
+redis-1          | 1:M 07 Apr 2026 07:41:54.790 * Ready to accept connections tcp
+redis-1          | 1:M 07 Apr 2026 07:41:54.790 # WARNING: Redis does not require authentication and is not protected by network restrictions. Redis will accept connections from any IP address on any network interface.
+redis-1          | 1:signal-handler (1775552106) Received SIGTERM scheduling shutdown...
+bd-1             | 2026-04-07 08:55:06.573 UTC [1] LOG:  received fast shutdown request
+apache1-1        | [Tue Apr 07 08:55:06.577747 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+apache2-1        | [Tue Apr 07 08:55:06.577747 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+bd-1             | 2026-04-07 08:55:06.581 UTC [1] LOG:  aborting any active transactions
+bd-1             | 2026-04-07 08:55:06.585 UTC [1] LOG:  background worker "logical replication launcher" (PID 32) exited with exit code 1
+bd-1             | 2026-04-07 08:55:06.586 UTC [27] LOG:  shutting down
+bd-1             | 2026-04-07 08:55:06.593 UTC [27] LOG:  checkpoint starting: shutdown immediate
+bd-1             | 2026-04-07 08:55:06.615 UTC [27] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.011 s, sync=0.001 s, total=0.029 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/156B600, redo lsn=0/156B600
+bd-1             | 2026-04-07 08:55:06.624 UTC [1] LOG:  database system is shut down
+redis-1          | 1:M 07 Apr 2026 08:55:06.644 * User requested shutdown...
+redis-1          | 1:M 07 Apr 2026 08:55:06.645 * Saving the final RDB snapshot before exiting.
+redis-1          | 1:M 07 Apr 2026 08:55:06.648 * BGSAVE done, 0 keys saved, 0 keys skipped, 88 bytes written.
+redis-1          | 1:M 07 Apr 2026 08:55:06.653 * DB saved on disk
+redis-1          | 1:M 07 Apr 2026 08:55:06.653 # Redis is now ready to exit, bye bye...
+[Kbd-1 exited with code 0
+[Kreverse-proxy-1 exited with code 0
+[Kredis-1 exited with code 0
+[Kapache1-1 exited with code 0
+[Kapache2-1 exited with code 0

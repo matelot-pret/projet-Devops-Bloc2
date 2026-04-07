@@ -69,6 +69,17 @@ services:
     volumes:
       - redis_data:/data
 
+  trivy:
+    image: aquasec/trivy:0.61.0
+    entrypoint: "/bin/sh"
+    command: "-c '(trivy image projet1-apache1 ; trivy image projet1-apache2 ; trivy image postgres:16 ; trivy image redis:latest ; trivy image nginx:latest) > /logs/trivy-$(date +%Y.%m.%d-%H-%M-%S).log 2>&1'"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs:/logs
+    networks:
+      - front
+
 volumes:
   pg_data:
   redis_data:
+  trivy_cache:

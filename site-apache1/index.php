@@ -5,7 +5,7 @@
     <title>Site apache</title>
 </head>
 <body>
-
+<h1>Oiseaux</h1>
 <?php
 $debut = microtime(true);
 
