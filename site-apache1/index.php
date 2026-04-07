@@ -9,7 +9,7 @@
 <?php
 $debut = microtime(true);
 
-$conn = pg_connect("host=bd dbname=postgres user=postgres password=secret");
+$conn = pg_connect("host=bd dbname=Patrick user=Patrick password=Samourai3");
 
 $result = pg_query($conn, "SELECT * FROM Pays");
 

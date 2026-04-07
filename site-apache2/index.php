@@ -17,7 +17,7 @@ if ($cache) {
     $pays = unserialize($cache);
     $source = "CACHE Redis";
 } else {
-    $conn = pg_connect("host=bd dbname=postgres user=postgres password=secret");
+    $conn = pg_connect("host=bd dbname=Patrick user=Patrick password=Samourai3");
     $result = pg_query($conn, "SELECT * FROM Pays");
     $pays = pg_fetch_all($result);
     pg_close($conn);
