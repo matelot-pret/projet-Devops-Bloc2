@@ -5,7 +5,6 @@
     <title>Site apache</title>
 </head>
 <body>
-<h1>site apache 1</h1>
 
 <?php
 $debut = microtime(true);

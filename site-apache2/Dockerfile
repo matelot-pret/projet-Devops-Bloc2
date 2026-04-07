@@ -11,7 +11,8 @@ WORKDIR /var/www/html
 ENV HOME=/root
 
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y nano wget git net-tools iputils-ping libpq-dev && \
+    apt-get install -y nano wget git net-tools iputils-ping libpq-dev autoconf && \
     apt-get clean
 
 RUN docker-php-ext-install pgsql
+RUN pecl install redis && docker-php-ext-enable redis
