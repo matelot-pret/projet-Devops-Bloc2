@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Ne pas rediriger si on est déjà dans public/
+# (évite la boucle infinie quand Apache réapplique le .htaccess)
+RewriteCond %{REQUEST_URI} !^/public/
+
+# Redirige tout vers public/ en interne (l'URL visible reste inchangée)
+RewriteRule ^(.*)$ public/$1 [L]
